@@ -8,17 +8,19 @@ public class Vehicle {
     private int productionYear;
     private String vehicleCondition;
     private int speed;
+    private int vehicleWorth;
 
     public Vehicle() {
 
     }
 
-    public Vehicle(String brand, String model, int productionYear, String vehicleCondition, int speed) {
+    public Vehicle(String brand, String model, int productionYear, String vehicleCondition, int speed, int vehicleWorth) {
         this.brand = brand;
         this.model = model;
         this.productionYear = productionYear;
         this.vehicleCondition = vehicleCondition;
-        this.speed = speed; }
+        this.speed = speed;
+        this.vehicleWorth = vehicleWorth;}
 
 
         public String getBrand() {
@@ -53,6 +55,9 @@ public class Vehicle {
     }
 
     public void setVehicleCondition(String vehicleCondition) {
+
+
+
         this.vehicleCondition = vehicleCondition;
     }
 
@@ -62,6 +67,20 @@ public class Vehicle {
 
     public void setSpeed(int speed) {
         this.speed = speed;
+    }
+
+    public int getVehicleWorth() {
+        return vehicleWorth;
+    }
+
+    public void setVehicleWorth(int vehicleWorth) {
+        this.vehicleWorth = vehicleWorth;
+    }
+
+    public double insuranceCost(){
+        double insurancePrice = vehicleWorth * 0.10;
+        System.out.println("Insurance Cost: " + insurancePrice);
+        return insurancePrice;
     }
 }
 

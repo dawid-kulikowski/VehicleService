@@ -7,6 +7,9 @@ public class VehicleService {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         Vehicle vehicle = new Car();
+        Vehicle bike = new Bike();
+
+
 
         System.out.println("Brand: ");
         vehicle.setBrand(scanner.next());
@@ -14,9 +17,29 @@ public class VehicleService {
         vehicle.setModel(scanner.next());
         System.out.println("Year of production:");
         vehicle.setProductionYear(scanner.nextInt());
-        System.out.println("Condition of Vehicle (NEW,USED,DAMAGED: ");
+        System.out.println("Condition of Vehicle (NEW,USED) : ");
         vehicle.setVehicleCondition(scanner.next());
+        System.out.println("Condition of Vehicle (NEW,USED) : ");
+        vehicle.setVehicleWorth(scanner.nextInt());
 
+        System.out.println("Brand: ");
+        bike.setBrand(scanner.next());
+        System.out.println("Model: ");
+        bike.setModel(scanner.next());
+        System.out.println("Year of production:");
+        bike.setProductionYear(scanner.nextInt());
+        System.out.println("Condition of Bike (NEW,USED) : ");
+        bike.setVehicleCondition(scanner.next());
+        System.out.println("Bike Estimated Worth: ");
+        bike.setVehicleWorth(scanner.nextInt());
+
+
+
+        System.out.println(vehicle.getBrand() + vehicle.getModel() + vehicle.getVehicleCondition());
+        vehicle.insuranceCost();
+        bike.insuranceCost();
 
     }
+
+
 }

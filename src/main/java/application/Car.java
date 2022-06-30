@@ -8,8 +8,8 @@ public class Car extends Vehicle {
 
     }
 
-    public Car(String brand, String model, int productionYear, String vehicleCondition, int speed) {
-        super(brand, model, productionYear, vehicleCondition, speed);
+    public Car(String brand, String model, int productionYear, String vehicleCondition, int speed, int vehicleWorth) {
+        super(brand, model, productionYear, vehicleCondition, speed, vehicleWorth);
     }
 
 }
